@@ -20,7 +20,8 @@ app.set("view engine", "ejs");
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "defaultsecret",
+    secret: process.env.SESSION_SECRET,
+    // SESSION_SECRET is required - set it in your .env file,
     resave: false,
     saveUninitialized: false,
   })
